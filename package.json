@@ -1,0 +1,20 @@
+{
+  "name": "usefarrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "farrow dev",
+    "build": "farrow build",
+    "start": "farrow start",
+    "update:npm": "ncu -u && npm install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "farrow": "^1.5.2",
+    "farrow-http": "^1.5.0",
+    "farrow-pipeline": "^1.5.0",
+    "farrow-schema": "^1.4.0"
+  }
+}
