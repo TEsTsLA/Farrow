@@ -1,20 +1,15 @@
-import { Http, Response } from 'farrow-http'
+import { Http } from 'farrow-http'
+import { cors } from 'farrow-cors'
+import { user } from './modules/user'
+import { product } from './modules/product'
+import { DBS } from 'db/mysql'
 
-const http = Http()
+const http = Http({
+  basenames: ['/api'],
+})
+http.use(cors())
 
-http.use((req, next) => {
-  console.log(req.pathname)
-  return next()
-})
-// add http middleware
-http.get("/").use(() => {
-  // returning response in middleware
-  return Response.text(`Hello Farrow`)
-})
-http.get('/greet/<name:number>').use(requset => {
-  console.log(typeof requset.params.name)
-  console.log(requset.params.name)
-  return Response.json(requset.params.name)
-})
-
+http.route('/users').use(user)
+http.route('/product').use(product)
+http.route('/db').use(DBS)
 http.listen(3000)
