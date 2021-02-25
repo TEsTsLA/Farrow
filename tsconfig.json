@@ -14,9 +14,9 @@
     "outDir": "./dist",
     "paths": {
       "modelar": ["./src/modelar"],
-      "db/mysql": ["./src/modules/mysql"]
+      "$mysql": ["./src/modules/mysql"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

@@ -2,10 +2,16 @@ import { Http } from 'farrow-http'
 import { cors } from 'farrow-cors'
 import { user } from './modules/user'
 import { product } from './modules/product'
-import { DBS } from 'db/mysql'
+import { DBS } from '$mysql'
 
 const http = Http({
   basenames: ['/api'],
+  logger: {
+    transporter(log){
+      // console.error('==')
+      console.log(log)
+    }
+  }
 })
 http.use(cors())
 
