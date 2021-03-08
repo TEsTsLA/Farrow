@@ -1,4 +1,4 @@
-import { field, primary, searchable, autoIncrement, NotFoundError, ModelConfig, Model } from "modelar";
+import { field, primary, searchable, autoIncrement, NotFoundError, ModelConfig, Model, unique } from "modelar";
 import * as bcrypt from "bcrypt-nodejs";
 
 export class User extends Model {
@@ -12,10 +12,12 @@ export class User extends Model {
 
     @field("varchar", 32)
     @searchable
+    @unique
     name: string;
-
+    
     @field("varchar", 32)
     @searchable
+    @unique
     email: string;
 
     /**
