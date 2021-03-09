@@ -15,6 +15,7 @@
     "@types/node": "^14.14.32",
     "bcrypt-nodejs": "0.0.3",
     "farrow": "^1.6.7",
+    "farrow-api": "^1.6.7",
     "farrow-api-server": "^1.6.7",
     "farrow-cors": "^1.6.7",
     "farrow-http": "^1.6.7",
