@@ -17,7 +17,7 @@ export class BoId extends ObjectType {
   }
 }
 
-export const BookService = Router()
+export const BookModule = Router()
 
 export const getList = Api({
   description: 'remove todo',
@@ -29,14 +29,13 @@ export const getList = Api({
   return books
 })
 
-BookService.route('/book').use(ApiService({
+BookModule.route('/book').use(ApiService({
   entries: {
     getList
   }
 }))
 
-BookService.get('/codegen').use(async (request) => {
-
+BookModule.get('/codegen').use(async (request) => {
   let formatResult = toJSON({
     getList
   })
@@ -52,7 +51,7 @@ BookService.get('/codegen').use(async (request) => {
   });
   return Response.text('OK')
 })
-BookService.get('/validate').use(async (request) => {
+BookModule.get('/validate').use(async (request) => {
   const validate = createSchemaValidator(Float)
   console.log(
     validate('11,11')

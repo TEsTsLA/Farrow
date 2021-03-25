@@ -7,13 +7,13 @@ import { codegen } from 'farrow-api/src/codegen'
 import { Table } from 'modelar';
 
 export { local_DB, Book, Product, User }
-export const DBS = Router()
-DBS.get('/show_database').use(async (request) => {
+export const DB_Module = Router()
+DB_Module.get('/show_database').use(async (request) => {
   const result = await local_DB.query("SHOW DATABASES").then(val => val.data.map(item => item.Database))
   return Response.json(result)
 })
 
-DBS.get("/create_table").use(async (request) => {
+DB_Module.get("/create_table").use(async (request) => {
   // const result = await Book.use(local_DB).createTable()
   // (new Table(new Book))
   const bok = new Book
@@ -21,7 +21,7 @@ DBS.get("/create_table").use(async (request) => {
   return Response.json(
     tab.toString())
 })
-DBS.get('gen').use(async () => {
+DB_Module.get('gen').use(async () => {
   
   return Response.json('ok')
 })
