@@ -20,6 +20,7 @@
     "farrow-api-server": "^1.8.5",
     "farrow-cors": "^1.8.1",
     "farrow-http": "^1.8.1",
+    "farrow-module": "^1.8.0",
     "farrow-pipeline": "^1.8.0",
     "farrow-schema": "^1.8.0",
     "hide-protected-properties": "^0.1.1",

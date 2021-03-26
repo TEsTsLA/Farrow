@@ -1,16 +1,20 @@
 import { Router, Response } from 'farrow-http'
-// create product router
-export const ProductModule = Router()
-// handle product router
-// this will match /product/:id
-ProductModule.get('/<id:int>').use(async (request) => {
+import { Module } from 'farrow-module'
+export class ProductModule extends Module {
+  static path = '/product'
+  static router = Router()
+
+}
+
+export const ProductRouter = Router()
+ProductRouter.get('/<id:int>').use(async (request) => {
   return Response.json({
     productId: request.params.id,
   })
 })
 
 // this will match /product/info
-ProductModule.get('/info').use(async (request) => {
+ProductRouter.get('/info').use(async (request) => {
   return Response.json({
     productInfo: {},
   })
