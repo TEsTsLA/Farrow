@@ -24,6 +24,7 @@
     "farrow-pipeline": "^1.8.0",
     "farrow-schema": "^1.9.4",
     "hide-protected-properties": "^0.1.1",
+    "jest": "^26.6.3",
     "lodash": "^4.17.21",
     "mysql": "^2.18.1",
     "tslib": "^2.2.0"

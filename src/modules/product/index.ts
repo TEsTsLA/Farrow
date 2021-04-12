@@ -5,15 +5,14 @@ export class ProductModule extends Module {
   static router = Router()
 
 }
-
 export const ProductRouter = Router()
+
 ProductRouter.get('/<id:int>').use(async (request) => {
   return Response.json({
     productId: request.params.id,
   })
 })
 
-// this will match /product/info
 ProductRouter.get('/info').use(async (request) => {
   return Response.json({
     productInfo: {},

@@ -1,12 +1,13 @@
 
 import { App, HttpModule } from "$libs/HttpModule";
 import { BookModule } from "$modules/book";
+import { cors } from 'farrow-cors'
 @App({
   keyName: 'Book',
-  middlewares: [],
+  middlewares: [cors()],
   modules: [BookModule]
 })
 export class BookApp extends HttpModule {
-  port = 3003
+  port = 3000
 }
 
