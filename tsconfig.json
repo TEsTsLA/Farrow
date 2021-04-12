@@ -14,7 +14,10 @@
     "outDir": "./dist",
     "paths": {
       "modelar": ["./src/modelar"],
-      "$mysql": ["./src/modules/mysql"]
+      "$mysql": ["./src/modules/mysql"],
+      "$libs/*": ["./src/libs/*"],
+      "$app/*": ["./src/app/*"],
+      "$modules/*": ["./src/modules/*"]
     }
   },
   "include": ["src/*"],

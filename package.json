@@ -7,24 +7,25 @@
     "dev": "farrow dev",
     "build": "farrow build",
     "start": "farrow start",
-    "update:npm": "ncu -u && npm install"
+    "update:npm": "ncu -u && pnpm install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^14.14.35",
+    "@types/node": "^14.14.37",
     "bcrypt-nodejs": "0.0.3",
-    "farrow": "^1.8.5",
-    "farrow-api": "^1.8.5",
-    "farrow-api-client": "^1.8.7",
-    "farrow-api-server": "^1.8.5",
-    "farrow-cors": "^1.8.1",
-    "farrow-http": "^1.8.1",
+    "farrow": "^1.9.4",
+    "farrow-api": "^1.9.4",
+    "farrow-api-client": "^1.9.4",
+    "farrow-api-server": "^1.9.4",
+    "farrow-cors": "^1.9.4",
+    "farrow-http": "^1.9.4",
     "farrow-module": "^1.8.0",
     "farrow-pipeline": "^1.8.0",
-    "farrow-schema": "^1.8.0",
+    "farrow-schema": "^1.9.4",
     "hide-protected-properties": "^0.1.1",
     "lodash": "^4.17.21",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "tslib": "^2.2.0"
   }
 }
